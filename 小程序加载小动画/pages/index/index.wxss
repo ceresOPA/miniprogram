@@ -1,0 +1,248 @@
+/**index.wxss**/
+
+.page {
+  position: fixed;
+  height: 100%;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/*遮罩*/
+
+.loader {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2); /*这里使用rgba是利用了其中的alpha通道设置透明度，这样可以避免子元素的透明度改变*/
+  z-index: 999;
+}
+
+/**第一个Loader的css**/
+
+.ring {
+  position: relative;
+  bottom: 80rpx;
+  width: 45px;
+  height: 45px;
+  border: 4px solid #4b9cdb;
+  border-radius: 100%;
+}
+
+.ball {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #4282b3;
+}
+
+.ball-loader {
+  position: absolute;
+  width: 45px;
+  height: 50px;
+  animation: loading 1.3s linear infinite; /*其中的linear表示动画从头到尾的速度一样，infinite是不断循环动画*/
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**第一个Loader的css**/
+
+/**第二个Loader的css**/
+
+.rect-wapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 300rpx;
+  height: 300rpx;
+  margin-bottom: 120rpx;
+}
+
+.rect-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100rpx;
+}
+
+.rect {
+  width: 5px;
+  height: 30px;
+  background-color: #f58d3c;
+}
+
+.rect-1 {
+  animation: grow 1s ease-in-out infinite;
+}
+
+.rect-2 {
+  animation: grow 1s ease-in-out 0.15s infinite; /*其中第一个1s指的是动画播放的花费时间，第二个0.15s指的是动画播放的延迟时间，其他同理*/
+}
+
+.rect-3 {
+  animation: grow 1s ease-in-out 0.3s infinite;
+}
+
+.rect-4 {
+  animation: grow 1s ease-in-out 0.45s infinite;
+}
+
+@keyframes grow {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(1.8);
+  }
+}
+
+/**第二个Loader的css**/
+
+/**第三个Loader的css**/
+
+.round-wapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 300rpx;
+  height: 300rpx;
+  margin-bottom: 120rpx;
+}
+
+.round {
+  position: relative;
+}
+
+.round-1 {
+  width: 50px;
+  height: 50px;
+  border: 8px dashed #39b54a;
+  border-radius: 100%;
+  animation: circle1 2s ease-out infinite;
+}
+
+.round-2 {
+  width: 25px;
+  height: 25px;
+  border: 6px dashed #39b54a;
+  border-radius: 100%;
+  animation: circle2 2s ease-out infinite;
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+}
+
+@keyframes circle1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes circle2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**第三个Loader的css**/
+
+.letter {
+  display: flex;
+  font-size: 26px;
+  text-indent: 10px;
+  animation: letter-animation 3s linear infinite;
+}
+
+.letter-wapper {
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.l-1 {
+  animation-delay: 0.5s;
+}
+
+.l-2 {
+  animation-delay: 1s;
+}
+
+.l-3 {
+  animation-delay: 1.5s;
+}
+
+.l-4 {
+  animation-delay: 2s;
+}
+
+@keyframes letter-animation {
+  0% {
+    opacity: 0.2;
+    color: #4282b3;
+  }
+
+  50% {
+    opacity: 0.5;
+    color: #f58d3c;
+  }
+
+  100% {
+    opacity: 1;
+    color: #39b54a;
+  }
+}
+
+.btn-loader1 {
+  background-color: #1ab6bb;
+  color: #fff;
+  margin-top: 150rpx;
+}
+
+.btn-loader2 {
+  background-color: #f58d3c;
+  color: #fff;
+  margin-top: 150rpx;
+}
+
+.btn-loader3 {
+  background-color: #39b54a;
+  color: #fff;
+  margin-top: 150rpx;
+}

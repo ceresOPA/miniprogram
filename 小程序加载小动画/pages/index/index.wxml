@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="page">
+
+  <button class='btn-loader1' bindtap='openLoader1'>
+    加载动画1
+  </button>
+
+  <button class='btn-loader2' bindtap='openLoader2'>
+    加载动画2
+  </button>
+
+  <button class='btn-loader3' bindtap='openLoader3'>
+    加载动画3
+  </button>
+
+  <view class="letter-wapper">
+    <view class="letter">
+      <view class="l-1 letter">是</view>
+      <view class="l-2 letter">道</view>
+      <view class="l-3 letter">长</view>
+      <view class="l-4 letter">呀</view>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 第一个Loader -->
+<view class="loader" wx:if="{{loader1}}" bindtap="hideLoading">
+  <view class="ring">
+    <view class="ball-loader">
+      <view class="ball"></view>
+    </view>
+  </view>
+</view>
+
+<!-- 第二个Loader -->
+<view class="loader" wx:if="{{loader2}}" bindtap="hideLoading">
+  <view class="rect-wapper">
+    <view class="rect-block">
+      <view class="rect-1 rect"></view>
+      <view class="rect-2 rect"></view>
+      <view class="rect-3 rect"></view>
+      <view class="rect-4 rect"></view>
+    </view>
+  </view>
+</view>
+
+<!-- 第三个Loader -->
+<view class="loader" wx:if="{{loader3}}" bindtap="hideLoading">
+  <view class="round-wapper ">
+    <view class="round">
+      <view class="round-1"> </view>
+      <view class="round-2"></view>
+    </view>
+  </view>
+</view>
